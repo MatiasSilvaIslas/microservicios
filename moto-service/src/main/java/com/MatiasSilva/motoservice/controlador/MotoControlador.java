@@ -23,7 +23,7 @@ public class MotoControlador {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Moto> obtenerUsuario(@PathVariable("id") Long id){
+    public ResponseEntity<Moto> obtenerMoto(@PathVariable("id") Long id){
         Moto moto = motoServicio.obtenerMoto(id);
         if(moto == null){
             ResponseEntity.notFound().build();

@@ -1,0 +1,18 @@
+#server.port=8082
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/usuarios
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  application:
+    name: usuario-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081

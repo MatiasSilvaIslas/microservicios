@@ -24,7 +24,7 @@ public class AutoControlador {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Auto> obtenerUsuario(@PathVariable("id") Long id){
+    public ResponseEntity<Auto> obtenerAuto(@PathVariable("id") Long id){
         Auto auto = autoServicio.obtenerAuto(id);
         if(auto == null){
             ResponseEntity.notFound().build();
